@@ -1,0 +1,166 @@
+# Blender 3.3.1 MTL File: 'Amexander.blend'
+# www.blender.org
+
+newmtl Arm_left.001
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Arm_left.001_Base_Color.png
+map_Ns Arm_left.001_Roughness.png
+map_refl Arm_left.001_Metallic.png
+map_Bump -bm 1.000000 Arm_left.001_Normal.png
+
+newmtl Arm_right
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Arm_right_Base_Color.png
+map_Ns Arm_right_Roughness.png
+map_refl Arm_right_Metallic.png
+map_Bump -bm 1.000000 Arm_right_Normal.png
+
+newmtl Badge
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Badge_Base_Color.png
+map_Ns Badge_Roughness.png
+map_refl Badge_Metallic.png
+map_Bump -bm 1.000000 Badge_Normal.png
+
+newmtl Eye
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Eye_Base_Color.png
+map_Ns Eye_Roughness.png
+map_refl Eye_Metallic.png
+map_Bump -bm 1.000000 Eye_Normal.png
+
+newmtl Foot_left
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Foot_left_Base_Color.png
+map_Ns Foot_left_Roughness.png
+map_refl Foot_left_Metallic.png
+map_Bump -bm 1.000000 Foot_left_Normal.png
+
+newmtl Foot_right
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Foot_right_Base_Color.png
+map_Ns Foot_right_Roughness.png
+map_refl Foot_right_Metallic.png
+map_Bump -bm 1.000000 Foot_right_Normal.png
+
+newmtl Glass
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Hand_left
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Hand_left_Base_Color.png
+map_Ns Hand_left_Roughness.png
+map_refl Hand_left_Metallic.png
+map_Bump -bm 1.000000 Hand_left_Normal.png
+
+newmtl Hand_right
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Hand_right_Base_Color.png
+map_Ns Hand_right_Roughness.png
+map_refl Hand_right_Metallic.png
+map_Bump -bm 1.000000 Hand_right_Normal.png
+
+newmtl Hat
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Hat_Base_Color.png
+map_Ns Hat_Roughness.png
+map_refl Hat_Metallic.png
+map_Bump -bm 1.000000 Hat_Normal.png
+
+newmtl Leg_left
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Leg_left_Base_Color.png
+map_Ns Leg_left_Roughness.png
+map_refl Leg_left_Metallic.png
+map_Bump -bm 1.000000 Leg_left_Normal.png
+
+newmtl Leg_right
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Leg_right_Base_Color.png
+map_Ns Leg_right_Roughness.png
+map_refl Leg_right_Metallic.png
+map_Bump -bm 1.000000 Leg_right_Normal.png
+
+newmtl Material
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Torso
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Torso_Base_Color.png
+map_Ns Torso_Roughness.png
+map_refl Torso_Metallic.png
+map_Bump -bm 1.000000 Torso_Normal.png

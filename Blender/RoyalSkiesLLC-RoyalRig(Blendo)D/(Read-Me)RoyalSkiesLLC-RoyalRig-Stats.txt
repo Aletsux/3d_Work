@@ -1,0 +1,150 @@
+There are 2 different Rigs for Blendo. If you're not using Motion Capture, the Standard IK rig is the one you'll want to use - 
+	1: The standard IK rig for manual animation. 
+	2: And the Rokoko Modified Rig built for Motion Captured Animations. 
+
+The Rokoko Modified rig is specifically optimized with drivers that compliment Rokoko animation data.
+These include various foot drivers and rotation bones to help speed up animation clean-up.
+
+If you are looking for the bones related to weight painting (To Replace Blendo with your own character)
+Under object data properties > under layers > go to layer 2 > there you will find all of his deform bones with weight paint information. 
+Those are the bones you will be attaching your character to instead. The fastest method I know of is with a Blender Add-On called 'mesh data 
+transfer' which I believe you can find for free :) 
+Layer 1 = Animation Controller Bones (These are the main IK bones you will use for manual animation.
+Layer 2 = Deform Bones (Bones that have weight paint information for the mesh)
+Layer 3 = Hand Bones (Only)
+
+The following is a list of all the bone names, shape keys, drivers, and their equations in the Royal Rig. 
+All of the file information, mathatical formulas, model, and rig are free to use without charge. 
+I hope this rig can shed some light on some of the problems new young 3D artists encounter when trying to create their own rig. 
+While not necessary, it would be greatly appreciated to include Royal Skies LLC in the credits if the rig or character is used in
+a personal or commercial project. 
+
+83 Total Bones (27 Correction Drivers)
+Bone Name		Purpose			Driver Variable		Driver Trigger		Driver Equation
+cMain			Master position control
+cHeadTarget		Direction head faces
+cShrugger.L		Shrug shoulder control
+cShrugger.R		Shrug shoulder control
+cBicep.L		Bicep weight paint con	Y-Rotation		Bicep.L Y-Rotation	-var*1.5
+cBicep.R		Bicep weight paint con	Y-Rotation		Bicep.R Y-Rotation	-var*1.5
+cWrist.L		Wrist weight paint				Hand.L Z-Rotation	-abs(var * .025)
+cWrist.R		Wrist weight paint 				Hand.R Z-Rotation	-abs(var * .025)
+cThigh.L		Upper thigh clipping	Y-Location		Hip.L X-Rotation	-var*.035
+cThigh.R		Upper thigh clipping	Y-Location		Hip.R X-Rotation	-var*.035
+cButt.L			Butt bend shape fix	Y-Location		Hip.L X-Rotation	max(-.04, var*.05)
+						Z-Location		Hip.L X-Rotation	-var*.1
+cButt.R			Butt bend shape fix	Y-Location		Hip.R X-Rotation	max(-.04, var*.05)
+						Z-Location		Hip.R X-Rotation	-var*.1
+cHip.L			Hip weight paint fix	Y-Location		Hip.L X-Rotation	max(0, -var*.78)
+						Z-Location		Hip.L X-Rotation	var*.2
+cHip.R			Hip weight paint fix	Y-Location		Hip.R X-Rotation	max(0, -var*.78)
+						Z-Location		Hip.R X-Rotation	var*.2
+cToePivot.L		Pivots foot on toes
+cToePivot.R		Pivots foot on toes
+Head			Head weight paint
+Neck			Neck weight paint
+Shoulder.L		Shoulder weight paint 	X-Rotation		Bicep.L Z-Location	var *4.2
+						Y-Rotation		Bicep.L & handIK.L	min(0,max(rotx*.85,-var *13))
+						Z-Rotation		Bicep.L X-Loaction	-var *4
+Shoulder.R		Shoulder weight paint 	X-Rotation		Bicep.R Z-Location	var *4.2
+						Y-Rotation		Bicep.R & handIK.R	min(0,max(rotx*.85,-var *13))
+						Z-Rotation		Bicep.R X-Location	-var *4
+Elbow.L			Elbow weight paint
+Elbow.R			Elbow weight paint
+4arm.L			4arm weight paint
+4arm.R			4arm weight paint
+Hand.L			Hand weight paint
+Hand.R			Hand weight paint
+Bicep.L			Bicep direction con	X-Location		Bicep.L Z-Rotation	min(.005, max(-.078,-var*.06))
+						Z-Location		Bicep.L & HandIK.L	min(((abs(zar - .37) + (zar - .37)) / 2)*.3, max(-.042, var*.06))
+Bicep.R			Bicep direction con	X-Location		Bicep.R Z-Rotation	min(.078, max(-.005,-var*.06))
+						Z-Location		Bicep.R & HandIK.R	min(((abs(zar - .37) + (zar - .37)) / 2)*.3, max(-.042, var*.06))
+Spine3			Ribcage weight paint
+Spine2			Waist weight paint				coreIK Z-Rotation	rot / 2
+Spine1			Pelvis weight piant	
+Spine0			Master core positioner		
+coreIK			Direction chest faces	
+handIK.L		Hand position
+handIK.R		Hand position
+kneeIK.L		Direction knee faces
+kneeIK.R		Direction knee faces
+elbowIK.L		Direction elbow faces
+elbowIK.R		Direction elbow faces
+footIK.L		Position of foot
+footIK.R		Position of foot
+Hip.L			Hip weight paint
+Hip.R			Hip weight paint
+Knee.L			Knee weight paint
+Knee.R			Knee weight paint
+Shin.L			Shin weight paint
+Shin.R			Shin weight paint
+Foot.L			Foot weight paint
+Foot.R			Foot weight paint
+Toe.L			Controls foot position
+Toe.R			Controls foot position
+Toe1.L			Toe weight paint	Y-Location		Toe1.L X-Rotation	var * .0075
+						Z-Location		Toe1.L X-Rotation	var * .02
+Toe1.R			Toe weight paint	Y-Location		Toe1.R X-Rotation	var * .0075
+						Z-Location		Toe1.R X-Rotation	var * .02
+Thumb1.L		Finger weight paint
+Thumb2.L		Finger weight paint
+Thumb3.L		Finger weight paint
+Thumb1.R		Finger weight paint
+Thumb2.R		Finger weight paint
+Thumb3.R		Finger weight paint
+Pointer1.L		Finger weight paint
+Pointer2.L		Finger weight paint
+Pointer3.L		Finger weight paint
+Pointer1.R		Finger weight paint
+Pointer2.R		Finger weight paint
+Pointer3.R		Finger weight paint
+Middle1.L		Finger weight paint
+Middle2.L		Finger weight paint
+Middle3.L		Finger weight paint
+Middle1.R		Finger weight paint
+Middle2.R		Finger weight paint
+Middle3.R		Finger weight paint
+Ring1.L			Finger weight paint
+Ring2.L			Finger weight paint
+Ring3.L			Finger weight paint
+Ring1.R			Finger weight paint
+Ring2.R			Finger weight paint
+Ring3.R			Finger weight paint
+Pinky1.L		Finger weight paint
+Pinky2.L		Finger weight paint
+Pinky3.L		Finger weight paint
+Pinky1.R		Finger weight paint
+Pinky2.R		Finger weight paint
+Pinky3.R		Finger weight paint
+
+Total of 17 Mesh Correction Shape Keys (All automatically controlled by bone drivers)
+Key Name 	Purpose			Trigger			Driver Equation
+shoulder.L	Arm bending forward	bicepL X-Rotation	var * 1.35
+shoulder.R	Arm bending forward	bicepR X-Rotation	var * 1.35
+knee.L		Knee bend clippping	shinL X-Rotation	var*1.8
+knee.R		Knee bend clippping	shinR X-Rotation	var*1.8
+splits.L	Leg out sideways	hipL Z-Rotation		-(var/.421)* var**2
+splits.R	Leg out sideways	hipR Z-Rotation		(var/.421)* var**2
+thigh.L		Inner thigh bend 	hipL X-Rotation		-(var/.6)* var**2
+thigh.R		Inner thigh bend 	hipR X-Rotation		-(var/.6)* var**2
+butt.L		Leg bending back	hipL X-Rotation		(var/.03)*var**2
+butt.R		Leg bending back	hipR X-Rotation		(var/.03)*var**2
+elbow.L		Elbow bend clipping	4armL & BicepL		min(1+(yar/1.1+zar/9), (var/.26)*var**2) 
+elbow.R		Elbow bend clipping	4armL & BicepR		min(1-(yar/1.1+zar/9), (var/.26)*var**2)
+elbowDown.L	Elbow IK dropping	bicepL Y-Rotation	-(var/.32)*var**2
+elbowDown.R	Elbow IK dropping	bicepR Y-Rotation	(var/.32)*var**2
+elbowUp.L	Elbow IK raising	bicepL Y-Rotation	(var/.32)*var**2
+elbowUp.R	Elbow IK raising	bicepR Y-Rotation	-(var/.32)*var**2
+wristDown.L	Wrist bend down		handL Z-Rotation	-(var/.34)*var**2
+wristDown.R	Wrist bend down		handR Z-Rotation	(var/.34)*var**2
+wristUp.L	Wrist bend up		handL Z-Rotation	(var/.34)*var**2
+wristUp.R	Wrist bend up		handR Z-Rotation	-(var/.34)*var**2
+wristFront.L	Wrist twist up		handL Y-Rotation	-(var/.53)*var**2
+wristFront.R	Wrist twist up		handR Y-Rotation	(var/.53)*var**2
+wristBack.L	Wrist twist down	handR Y-Rotation	(var/.35)*var**2
+wristBack.R	Wrist twist down	handR Y-Rotation	-(var/.35)*var**2
+
+
+The creation of this Rig and its dissemination were only possible because of the amazing support on Patreon. I wouldn't be able to create and
+continue to generate content like this for free if it wasn't for the amazing community that has come together to fund these tools. 
+Thank you so much, and we all hope this rig helps you get closer to accomplishing your goals as an Animator :)
